@@ -24,7 +24,7 @@ function Addtodo() {
   return (
     <div className="mb-8">
       <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3">
-        {/* 🟢 Todo name input */}
+        {/*  Todo name input */}
         <div className="flex-1">
           <input
             type="text"
@@ -35,7 +35,7 @@ function Addtodo() {
           />
         </div>
 
-        {/* 📅 Due date input */}
+        {/*  Due date input */}
         <div className="sm:w-1/3">
           <input
             type="date"
@@ -45,7 +45,7 @@ function Addtodo() {
           />
         </div>
 
-        {/* 🔵 Add button */}
+        {/*  Add button */}
         <div>
           <button
             type="button"

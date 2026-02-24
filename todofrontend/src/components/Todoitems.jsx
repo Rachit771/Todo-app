@@ -5,13 +5,13 @@ import { Todoitem } from "./Todoitem";
 export const Todoitems = () => {
   const { todoItems, handledelete, handleToggleComplete } = useContext(TodoItemsContext);
 
-  // ✅ Group items like sir’s version
+  //  Group items 
   const pendingItems = todoItems.filter((item) => !item.completed);
   const completedItems = todoItems.filter((item) => item.completed);
 
   return (
     <div>
-      {/* 🟣 Pending (to-do) tasks */}
+      {/*  Pending (to-do) tasks */}
       {pendingItems.length > 0 && (
         <div className="mb-6">
           <h2 className="text-lg font-semibold text-gray-700 mb-3">Tasks to Do</h2>
@@ -31,7 +31,7 @@ export const Todoitems = () => {
         </div>
       )}
 
-      {/* ✅ Completed tasks */}
+      {/* Completed tasks */}
       {completedItems.length > 0 && (
         <div className="mt-6 pt-6 border-t border-gray-200">
           <h2 className="text-lg font-semibold text-gray-500 mb-3">

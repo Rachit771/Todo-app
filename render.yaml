@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: todo-backend
+    env: node
+    plan: free
+    rootDir: todobackend
+    buildCommand: npm ci
+    startCommand: npm start
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+      - key: NODE_VERSION
+        value: 20.19.0
+
+  - type: static_site
+    name: todo-frontend
+    rootDir: todofrontend
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_API_URL
+        sync: false
+      - key: NODE_VERSION
+        value: 20.19.0
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

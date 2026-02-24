@@ -6,7 +6,7 @@ export function Todoitem({
   ondelete,
   onToggleComplete,
 }) {
-  // ✅ Format date just like sir’s version
+  //  Formated date 
   const formatDate = (dateString) => {
     if (!dateString) return "";
     return new Date(dateString).toLocaleDateString("en-US", {
@@ -22,7 +22,7 @@ export function Todoitem({
         completed ? "bg-gray-50 border-gray-200" : "bg-white border-gray-200"
       } shadow-sm hover:shadow-md transition-shadow`}
     >
-      {/* 🟢 Left section: checkbox + task name */}
+      {/*  Left section: checkbox + task name */}
       <div className="flex items-center mb-2 sm:mb-0 sm:flex-1">
         <input
           type="checkbox"
@@ -39,12 +39,12 @@ export function Todoitem({
         </span>
       </div>
 
-      {/* 📅 Middle section: formatted due date */}
+      {/*  Middle section: formatted due date */}
       <div className="text-gray-500 mb-2 sm:mb-0 sm:w-1/3">
         {formatDate(tododate)}
       </div>
 
-      {/* ❌ Right section: delete button */}
+      {/*  Right section: delete button */}
       <div>
         <button
           type="button"
