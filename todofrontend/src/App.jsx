@@ -1,4 +1,4 @@
-import AppName from "./components/Appname";
+import AppName from "./components/AppName";
 import Addtodo from "./components/Addtodo";
 import WelcomeMessage from "./components/WelcomeMessage";
 import {Todoitems} from "./components/Todoitems";
